@@ -1,10 +1,15 @@
+// src/components/Footer.jsx
 import React from 'react';
-import './../styles/main.css'; // Si tienes estilos para este componente
 
 const Footer = () => {
   return (
-    <footer>
-      <p>&copy; 2025 Portafolio</p>
+    <footer className="footer">
+      <p>&copy; 2025 Mi Portafolio</p>
+      <p>
+        <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+        |
+        <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
     </footer>
   );
 };

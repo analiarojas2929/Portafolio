@@ -1,37 +1,321 @@
-@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Estilo para el header */
+header {
+  background-color: #f8f0f5; /* Color suave pastel de fondo (rosado pálido) */
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.name.navbar-brand {
+  color: #d76a87 !important; /* Rosa suave */
+  font-size: 36px !important; /* Tamaño de fuente personalizado */
+  font-family: 'Alex Brush', cursive !important; /* Fuente personalizada */
+  letter-spacing: 2px !important; /* Espaciado entre letras */
+  transition: color 0.3s ease-in-out !important; /* Transición suave en el color */
+}
+
+.name.navbar-brand:hover {
+  color: #ff7f50 !important; /* Color coral en hover */
+}
+
+/* También, si tienes algún otro estilo que puede verse afectado por bootstrap */
+.navbar-light .navbar-nav .nav-link {
+  color: #d76a87 !important;
+  font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ff7f50 !important;
+}
+.navbar-toggler {
+  border: none;
+}
+
+
+/* Enlaces de navegación */
+.nav-item {
+  margin-left: 20px;
+  position: relative; /* Necesario para el subrayado animado */
+}
+
+.nav-link {
+  color: #d76a87; /* Rosa suave */
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: #ff7f50; /* Coral suave en hover */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+/* Subrayado animado */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff7f50; /* Color del subrayado */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  width: 100%; /* El subrayado se expande al 100% cuando se pasa el ratón */
+}
+
+/* Animación de aparición de los enlaces */
+.navbar-nav {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fondo de navbar en dispositivos pequeños */
+@media (max-width: 768px) {
   header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    background-color: #fff; /* Fondo blanco para dispositivos móviles */
   }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
+}
+
+/* Contenedor principal */
+.home-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Estilo para la imagen con animación de resaltar */
+.resaltar-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;  /* Para hacerlo circular */
+  object-fit: cover;  /* Ajustar la imagen sin distorsionarla */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Agregar sombra */
+  margin-bottom: 20px;  /* Espacio debajo de la imagen */
+}
+
+/* Estilo para la imagen con efecto rebote */
+.rebotar-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+/* Home.css */
+.fade-in-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in-img.visible {
+  opacity: 1;  /* Aparece completamente cuando se le da la clase 'visible' */
+}
+/* home-container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.fade-in-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.fade-in-text {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.image-container {
+  margin: 2rem 0;
+}
+
+/* Imagen que resalta con efecto */
+.resaltar-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in-img {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
+}
+
+/* Sección de habilidades */
+.skills-container {
+  margin-top: 2rem;
+}
+
+.skills-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+/* Llamado a la acción */
+.cta-container {
+  margin-top: 3rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #4CAF50;
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+  header {
+    background-color: #fff;
   }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  footer {
+
+  /* El menú debe ser desplegable en móviles */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    width: 100%;
   }
-  
+
+  /* Colapsar el menú en móviles */
+  .navbar-collapse {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Los enlaces deben ocupar el 100% de ancho */
+  .nav-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilos para la sección "About" */
+.about-container {
+  padding: 60px 20px;
+  background-color: #f8f0f5; /* Fondo suave rosado */
+  color: #333;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d76a87;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.name {
+  color: #d76a87;
+  font-weight: bold;
+}
+
+/* Agregar animación de aparición para el texto */
+.about-container {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
