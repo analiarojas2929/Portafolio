@@ -9,14 +9,16 @@ const NavbarComponent = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      // Cambiamos el umbral a 0 para que sea más inmediato
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Añadimos la opción passive para mejor rendimiento
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // Limpiar el evento al desmontar el componente
     return () => {
@@ -27,7 +29,11 @@ const NavbarComponent = () => {
   return (
     <>
       <div className="background-image"></div>
-      <Navbar expand="lg" className={`transparent-menu ${scrolled ? 'scrolled' : ''}`}>
+      <Navbar 
+        expand="lg" 
+        fixed="top" // Añadimos fixed-top para asegurar que el navbar esté fijo
+        className={`transparent-menu ${scrolled ? 'scrolled' : ''}`}
+      >
         <Container>
           <motion.h1 
             className="name navbar-brand" 
@@ -45,8 +51,10 @@ const NavbarComponent = () => {
                   <Link 
                     className="nav-link" 
                     to={section} 
+                    spy={true} // Añadimos spy para mejor seguimiento del scroll
                     smooth={true} 
                     duration={500}
+                    offset={-70} // Añadimos offset para compensar la altura del navbar
                     activeClass="active-link"
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
