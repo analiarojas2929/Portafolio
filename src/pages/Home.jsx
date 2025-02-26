@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
+import programmerAnimation from '../assets/images/programmer-animation.json';
 import About from './About';
 import Skills from '../components/Skills';
 import ContactForm from '../components/ContactForm';
@@ -50,6 +52,18 @@ const Home = () => {
                 Conoce mi trabajo
               </motion.button>
             </motion.div>
+          </motion.div>
+          <motion.div 
+            className="hero-animation"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <Lottie 
+              animationData={programmerAnimation} 
+              loop={true}
+              style={{ width: '400px', height: '400px' }}
+            />
           </motion.div>
         </div>
       </motion.section>
