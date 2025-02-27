@@ -1,10 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import miFoto from '../assets/images/mi-foto-samsung.jpeg';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CV from '../assets/cv/Analia_Rojas_CV.pdf';
+
+
 
 const About = () => {
+  const handleDownloadCV = () => {
+    window.open(CV, '_blank');
+  };
+
   return (
-    <section id="about" className="about-container">
+    <section className="about-container">
       <motion.h2 
         className="section-title"
         initial={{ opacity: 0, y: -20 }}
@@ -46,7 +55,9 @@ const About = () => {
             className="about-cta"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleDownloadCV}
           >
+            <FontAwesomeIcon icon={faDownload} style={{ marginRight: '8px' }} />
             Descarga mi CV
           </motion.button>
         </motion.div>

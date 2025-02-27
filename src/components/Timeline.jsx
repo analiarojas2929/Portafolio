@@ -11,11 +11,11 @@ import {
 
 const Timeline = () => {
   const categoryColors = {
-    education: "#4CAF50",    // Verde para educación formal
+    educacion: "#4CAF50",    // Verde para educación formal
     bootcamp: "#2196F3",     // Azul para bootcamps
-    certification: "#FF9800", // Naranja para certificaciones
-    development: "#9C27B0",  // Morado para desarrollo
-    career: "#F44336"        // Rojo para hitos profesionales
+    certificacion: "#FF9800", // Naranja para certificaciones
+    developer: "#9C27B0",  // Morado para desarrollo
+    carrera: "#F44336"        // Rojo para hitos profesionales
   };
 
   const events = [
@@ -24,14 +24,14 @@ const Timeline = () => {
       title: "Titulada de Ingeniería en Informática",
       description: "Instituto DuocUC - Desarrollo de habilidades en programación, estructuras de datos y algoritmos.",
       icon: <FaGraduationCap />,
-      category: "education"
+      category: "educacion"
     },
     {
       year: "2025",
       title: "Diplomado Diseño y Gestión Ágil de Proyectos",
       description: "Diplomado en Diseño y Gestión Ágil de Proyectos - Fundacion telefónica ",
       icon: <FaAward />,
-      category: "certification"
+      category: "certificacion"
     },
     {
       year: "2024",
@@ -52,49 +52,49 @@ const Timeline = () => {
       title: "Desarrollo Frontend",
       description: "Desarrollo de aplicaciones web con JavaScript y tecnologías modernas - CodigoDojo and Banco de Chile",
       icon: <FaCode />,
-      category: "development"
+      category: "developer"
     },
     {
       year: "2024",
       title: "Desarrolladora Fullstack",
       description: "Especialización en React, Node.js y tecnologías modernas. Desarrollo de aplicaciones web responsivas.",
       icon: <FaCode />,
-      category: "development"
+      category: "developer"
     },
     {
       year: "2023",
       title: "Oracle Next Education + Alura Latam",
       description: "Formación intensiva en desarrollo web, Backend con Java, Frontend con React. Especialización G5 ONE.",
       icon: <FaCertificate />,
-      category: "certification"
+      category: "certificacion"
     },
     {
       year: "2022",
       title: "Introducción al Hacking Ético y Pentesting",
       description: "Introducción al Hacking Ético y Pentesting - Capacitación Usach",
       icon: <FaCertificate />,
-      category: "certification"
+      category: "certificacion"
     },
     {
       year: "2021",
       title: "Primeros Proyectos Web",
       description: "Desarrollo de proyectos personales utilizando HTML, CSS, JavaScript y React.",
       icon: <FaLaptopCode />,
-      category: "development"
+      category: "developer"
     },
     {
       year: "2020",
       title: "Inicio en Desarrollo Web",
       description: "Comenzando mi viaje en el desarrollo web y fundamentos de programación.",
       icon: <FaBriefcase />,
-      category: "career"
+      category: "carrera"
     },
     {
       year: "2020",
       title: "Estudiante de Ingeniería en Informática",
       description: "Instituto DuocUC - Desarrollo de habilidades en programación, estructuras de datos y algoritmos.",
       icon: <FaGraduationCap />,
-      category: "education"
+      category: "educacion"
     }
   ];
 

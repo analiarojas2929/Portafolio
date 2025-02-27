@@ -1,37 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll'; // Para scroll suave
-import { Navbar, Nav, Container } from 'react-bootstrap'; // Importando componentes de React-Bootstrap
+import { Link } from 'react-scroll';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import '../styles/main.css'; // Asegúrate de importar el archivo CSS
+import '../styles/main.css';
 
 const NavbarComponent = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      // Cambiamos el umbral a 0 para que sea más inmediato
-      if (window.scrollY > 0) {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
 
-    // Añadimos la opción passive para mejor rendimiento
     window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // Limpiar el evento al desmontar el componente
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = [
+    { id: 'sobre-mi', label: 'Sobre mi' },
+    { id: 'habilidades', label: 'Habilidades' },
+    { id: 'proyectos', label: 'Proyectos' },
+    { id: 'experiencia', label: 'Experiencia' },
+    { id: 'contacto', label: 'Contacto' }
+  ];
 
   return (
     <>
       <div className="background-image"></div>
       <Navbar 
         expand="lg" 
-        fixed="top" // Añadimos fixed-top para asegurar que el navbar esté fijo
+        fixed="top"
         className={`transparent-menu ${scrolled ? 'scrolled' : ''}`}
       >
         <Container>
@@ -46,18 +50,19 @@ const NavbarComponent = () => {
           <Navbar.Toggle aria-controls="navbarNav" />
           <Navbar.Collapse id="navbarNav">
             <Nav className="ms-auto">
-              {['Sobre mi', 'habilidades', 'proyectos', 'experiencia'].map((section) => (
-                <Nav.Item key={section}>
+              {navLinks.map(({id, label}) => (
+                <Nav.Item key={id}>
                   <Link 
-                    className="nav-link" 
-                    to={section} 
-                    spy={true} // Añadimos spy para mejor seguimiento del scroll
-                    smooth={true} 
+                    className={`nav-link ${activeLink === id ? 'active' : ''}`}
+                    to={id}
+                    spy={true}
+                    smooth={true}
                     duration={500}
-                    offset={-70} // Añadimos offset para compensar la altura del navbar
-                    activeClass="active-link"
+                    offset={-80}
+                    activeClass="active"
+                    onSetActive={() => setActiveLink(id)}
                   >
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                    {label}
                   </Link>
                 </Nav.Item>
               ))}
