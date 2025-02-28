@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import programmerAnimation from "../assets/images/programmer-animation.json";
 import About from "./About";
 import Skills from "../components/Skills";
-import ContactForm from "../components/ContactForm";
+import Contact from "../pages/Contact";
 import Badges from "../components/Badges";
 import Timeline from "../components/Timeline";
 
@@ -128,7 +128,7 @@ const Home = () => {
 
       {/* Contact Section */}
       <section id="contacto">
-        <ContactForm />
+        <Contact />
       </section>
     </>
   );
