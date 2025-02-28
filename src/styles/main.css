@@ -1104,6 +1104,7 @@ header {
     font-size: 1rem;
   }
 }
+/* Estilos mejorados para el formulario de contacto */
 .contact-section {
   padding: 6rem 2rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
@@ -1119,50 +1120,33 @@ header {
   margin: 0 auto;
 }
 
-.section-title {
-  color: #ffffff;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact-description {
-  color: rgba(255, 255, 255, 0.9); /* Mejor contraste para legibilidad */
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-}
-
 .contact-form {
   background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 15px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .form-group label {
-  position: absolute;
-  left: 0.5rem;
-  top: -0.7rem;
-  background-color: white;
-  padding: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.9rem;
-  color: #666;
+  margin-bottom: 0.5rem;
+  display: block;
   transition: all 0.3s ease;
-  border-radius: 4px;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: white;
@@ -1174,7 +1158,13 @@ header {
 .form-group textarea:focus {
   outline: none;
   border-color: #d76a87;
-  box-shadow: 0 0 10px rgba(215, 106, 135, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 15px rgba(215, 106, 135, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .submit-button {
@@ -1188,11 +1178,14 @@ header {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .submit-button:hover:not(:disabled) {
   background: linear-gradient(to right, #ff7f50, #d76a87);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(215, 106, 135, 0.3);
 }
 
 .submit-button:disabled {
@@ -1205,19 +1198,45 @@ header {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  font-weight: 500;
   animation: fadeIn 0.3s ease;
 }
 
 .status-message.success {
   background: rgba(75, 181, 67, 0.1);
   color: #4BB543;
+  border: 1px solid rgba(75, 181, 67, 0.3);
 }
 
 .status-message.error {
   background: rgba(255, 68, 68, 0.1);
   color: #ff4444;
+  border: 1px solid rgba(255, 68, 68, 0.3);
 }
 
+/* Responsive ajustado */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .submit-button {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Animaciones mejoradas */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1229,30 +1248,20 @@ header {
   }
 }
 
-@media (max-width: 768px) {
-  .contact-section {
-    padding: 4rem 1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .contact-form {
-    padding: 1.5rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    font-size: 0.95rem;  /* Ajuste para pantallas más pequeñas */
-  }
-
-  .submit-button {
-    font-size: 0.95rem;  /* Ajuste de tamaño de fuente */
-  }
+.contact-form {
+  animation: formAppear 0.5s ease forwards;
 }
 
-
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Timeline Section */
 .timeline-section {
   padding: 6rem 2rem;
