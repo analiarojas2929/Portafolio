@@ -19,10 +19,10 @@ const Skills = () => {
         { name: "HTML5", level: 90, icon: <FaHtml5 />, color: "#E34F26" },
         { name: "CSS3", level: 85, icon: <FaCss3Alt />, color: "#1572B6" },
         { name: "JavaScript", level: 80, icon: <FaJs />, color: "#F7DF1E" },
-        { name: "React", level: 85, icon: <FaReact />, color: "#61DAFB" },
-        { name: "Angular", level: 75, icon: <FaAngular />, color: "#DD0031" },
+        { name: "React", level: 65, icon: <FaReact />, color: "#61DAFB" },
+        { name: "Angular", level: 65, icon: <FaAngular />, color: "#DD0031" },
         { name: "TypeScript", level: 75, icon: <SiTypescript />, color: "#3178C6" },
-        { name: "TailwindCSS", level: 80, icon: <SiTailwindcss />, color: "#06B6D4" },
+        { name: "TailwindCSS", level: 45, icon: <SiTailwindcss />, color: "#06B6D4" },
         { name: "Bootstrap", level: 85, icon: <SiBootstrap />, color: "#7952B3" }
       ]
     },
@@ -32,9 +32,9 @@ const Skills = () => {
       color: "#3776AB",
       skills: [
         { name: "Python", level: 75, icon: <FaPython />, color: "#3776AB" },
-        { name: "Java", level: 70, icon: <FaJava />, color: "#ED8B00" },
-        { name: "Node.js", level: 75, icon: <FaNode />, color: "#339933" },
-        { name: "Spring Boot", level: 70, icon: <SiSpring />, color: "#6DB33F" }
+        { name: "Java", level: 60, icon: <FaJava />, color: "#ED8B00" },
+        { name: "Node.js", level: 60, icon: <FaNode />, color: "#339933" },
+        { name: "Spring Boot", level: 60, icon: <SiSpring />, color: "#6DB33F" }
       ]
     },
     {
@@ -42,7 +42,7 @@ const Skills = () => {
       icon: <SiMongodb />,
       color: "#47A248",
       skills: [
-        { name: "MongoDB", level: 75, icon: <SiMongodb />, color: "#47A248" },
+        { name: "MongoDB", level: 65, icon: <SiMongodb />, color: "#47A248" },
         { name: "MySQL", level: 80, icon: <SiMysql />, color: "#4479A1" },
         { name: "PostgreSQL", level: 70, icon: <SiPostgresql />, color: "#336791" }
       ]
@@ -52,7 +52,7 @@ const Skills = () => {
       icon: <SiDocker />,
       color: "#2496ED",
       skills: [
-        { name: "Git", level: 85, icon: <FaGithub />, color: "#F05032" },
+        { name: "Git", level: 75, icon: <FaGithub />, color: "#F05032" },
         { name: "Docker", level: 70, icon: <FaDocker />, color: "#2496ED" }
       ]
     }
