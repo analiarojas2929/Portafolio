@@ -109,7 +109,6 @@ const Skills = () => {
                         transition={{ duration: 1, delay: 0.3 }}
                         style={{ backgroundColor: skill.color }}
                       />
-                      <span className="skill-level">{skill.level}%</span>
                     </div>
                   </div>
                 </motion.div>
