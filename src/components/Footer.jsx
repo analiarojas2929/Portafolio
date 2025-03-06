@@ -27,7 +27,7 @@ const Footer = () => {
                 <FaGithub size={24} />
               </motion.a>
               <motion.a 
-                href="www.linkedin.com/in/analia-rojas-araya-056349205" 
+                href="https://www.linkedin.com/in/analia-rojas-araya-056349205/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, color: '#ff7f50' }}
