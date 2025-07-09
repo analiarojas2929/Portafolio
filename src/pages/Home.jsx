@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import programmerAnimation from "../assets/images/programmer-animation.json";
+import programmerGirl from "../assets/images/programmer-girl.png"; // Añade esta línea
 import About from "./About";
 import Skills from "../components/Skills";
 import Contact from "../pages/Contact";
@@ -57,10 +58,17 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <Lottie
-              animationData={programmerAnimation}
-              loop={true}
-              style={{ width: "400px", height: "400px" }}
+            <img
+              src={programmerGirl}
+              alt="Desarrolladora programando"
+              style={{ 
+                width: "600px", 
+                height: "600px", 
+                objectFit: "contain",
+                backgroundColor: "transparent",
+                mixBlendMode: "darken",
+                filter: "contrast(1.2)"
+              }}
             />
           </motion.div>
         </div>

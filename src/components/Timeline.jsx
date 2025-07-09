@@ -6,7 +6,8 @@ import {
   FaCode,
   FaLaptopCode,
   FaCertificate,
-  FaAward 
+  FaAward,
+  FaUserTie // Nuevo icono para Product Owner
 } from "react-icons/fa";
 
 const Timeline = () => {
@@ -14,11 +15,19 @@ const Timeline = () => {
     educacion: "#4CAF50",    // Verde para educación formal
     bootcamp: "#2196F3",     // Azul para bootcamps
     certificacion: "#FF9800", // Naranja para certificaciones
-    developer: "#9C27B0",  // Morado para desarrollo
-    carrera: "#F44336"        // Rojo para hitos profesionales
+    developer: "#9C27B0",    // Morado para desarrollo
+    carrera: "#F44336",      // Rojo para hitos profesionales
+    productowner: "#673AB7"  // Púrpura para Product Owner
   };
 
   const events = [
+    {
+      year: "2025",
+      title: "Product Owner - DevExtreme",
+      description: "Liderando la estrategia de producto y coordinando equipos de desarrollo. Gestión de roadmap, análisis de mercado y optimización de experiencia de usuario.",
+      icon: <FaUserTie />,
+      category: "productowner"
+    },
     {
       year: "2025",
       title: "Titulada de Ingeniería en Informática",
@@ -29,7 +38,7 @@ const Timeline = () => {
     {
       year: "2025",
       title: "Diplomado Diseño y Gestión Ágil de Proyectos",
-      description: "Diplomado en Diseño y Gestión Ágil de Proyectos - Fundacion telefónica ",
+      description: "Diplomado en Diseño y Gestión Ágil de Proyectos - Fundación Telefónica",
       icon: <FaAward />,
       category: "certificacion"
     },
@@ -49,10 +58,10 @@ const Timeline = () => {
     },
     {
       year: "2024",
-      title: "Desarrollo Frontend",
+      title: "Desarrollo Frontend con JavaScript",
       description: "Desarrollo de aplicaciones web con JavaScript y tecnologías modernas - CodigoDojo and Banco de Chile",
       icon: <FaCode />,
-      category: "developer"
+      category: "certificacion"
     },
     {
       year: "2024",
@@ -71,7 +80,7 @@ const Timeline = () => {
     {
       year: "2022",
       title: "Introducción al Hacking Ético y Pentesting",
-      description: "Introducción al Hacking Ético y Pentesting - Capacitación Usach",
+      description: "Introducción al Hacking Ético y Pentesting - Capacitación Universidad de Santiago de Chile (USACH)",
       icon: <FaCertificate />,
       category: "certificacion"
     },
@@ -132,6 +141,7 @@ const Timeline = () => {
             initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
           >
             <div 
               className="timeline-icon"
