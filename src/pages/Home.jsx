@@ -2,12 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import programmerAnimation from "../assets/images/programmer-animation.json";
-import programmerGirl from "../assets/images/programmer-girl.png"; // Añade esta línea
+import programmerGirl from "../assets/images/programmer-girl.png";
 import About from "./About";
 import Skills from "../components/Skills";
 import Contact from "../pages/Contact";
 import Badges from "../components/Badges";
 import Timeline from "../components/Timeline";
+import Projects from "./Projects"; // Importar el componente Projects
 
 const Home = () => {
   const fadeInVariants = {
@@ -90,7 +91,10 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="proyectos">
+      <section id="proyectos" className="projects-section-container">
+        <Projects /> {/* Asegúrate de que esto esté presente */}
+        
+        {/* Luego mantenemos la sección CTA existente */}
         <motion.section
           className="cta-section"
           initial="hidden"

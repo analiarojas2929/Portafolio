@@ -447,6 +447,7 @@ header {
 .skill-category-card {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
+  color: #f0f0f0;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   backdrop-filter: blur(10px);
@@ -1184,21 +1185,6 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .main-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .section {
-    padding: 4rem 1rem;
-  }
-}
-
 /* Footer Styles */
 .footer {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
@@ -1791,15 +1777,207 @@ header {
   animation: badgeAppear 0.5s ease forwards;
 }
 
-/* Añade estos estilos a main.css */
-.skills-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Estilos para ProjectCard completamente estáticos - sin efectos hover */
+.project-card-static {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #333;
 }
+
+.project-image-static {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-image-static img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content-static {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content-static h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-content-static p {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.tech-tags-static {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag-static {
+  background: #f0f0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.project-links-static {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-link-static {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.demo-link-static {
+  background: #3182ce;
+  color: white;
+}
+
+.code-link-static {
+  background: #2d3748;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para fondo oscuro */
+.projects-section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilos críticos para la visualización de proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card-static {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #333;
+}
+
+.project-content-static {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content-static h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-content-static p {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.tech-tags-static {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag-static {
+  background: #f0f0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.project-links-static {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-link-static {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.demo-link-static {
+  background: #3182ce;
+  color: white;
+}
+
+.code-link-static {
+  background: #2d3748;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para fondo oscuro */
+.projects-section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
 
 .skill-category-card {
   background: rgba(255, 255, 255, 0.05);
@@ -1809,172 +1987,21 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.category-header {
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Hacer transiciones muy rápidas en lugar de eliminarlas */
+.timeline-content {
+  transition: all 0.1s ease !important; /* Transición muy rápida */
 }
 
-.category-icon {
-  font-size: 2rem;
-  color: white;
+.timeline-item, 
+.timeline-icon, 
+.timeline-year {
+  transition: all 0.1s ease !important; /* Transición muy rápida */
 }
 
-.category-header h3 {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.skills-grid {
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  position: relative; /* Asegura el posicionamiento correcto */
-}
-
-.skill-item:hover {
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.skill-icon {
-  font-size: 1.8rem;
-  min-width: 40px;
-}
-
-.skill-info {
-  flex: 1;
-  position: relative; /* Añadido para posicionamiento */
-  padding-bottom: 10px; /* Espacio para el porcentaje */
-}
-
-.skill-info h4 {
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.progress-container {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  overflow: visible; /* Cambiado de hidden a visible */
-  position: relative;
-  margin-bottom: 20px; /* Añadido para dar espacio al porcentaje */
-}
-
-.progress-bar {
-  height: 100%;
-  border-radius: 3px;
-}
-
-.skill-level {
-  position: absolute;
-  right: 0;
-  top: -20px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
-  z-index: 2; /* Asegura que esté por encima de otros elementos */
-}
-
-@media (max-width: 768px) {
-  .skills-categories {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .category-header {
-    padding: 1rem;
-  }
-
-  .category-icon {
-    font-size: 1.5rem;
-  }
-
-  .category-header h3 {
-    font-size: 1.2rem;
-  }
-}
-
-.badge-image.no-bg {
-  background: transparent;
-  backdrop-filter: none;
-}
-
-.badge-image.talento-digital {
-  padding: 0;
-  border: none;
-  background: transparent;
-}
-
-.badge-image.talento-digital img {
-  object-fit: contain;
-  filter: none;
-}
-
-.gradient-background {
-  background: linear-gradient(
-    235deg,
-    #000005 0%,
-    #fe7cae 50%,
-    #000000 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Estilo para el scrollbar completo */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Estilo para el track (fondo) del scrollbar */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-/* Estilo para el thumb (la barra deslizadora) del scrollbar */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #ff7f50, #d76a87);
-  border-radius: 10px;
-}
-
-/* Efecto hover sobre el thumb */
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #ff6b3d, #c15574);
-}
-
-/* Para Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #ff7f50 #000000;
+/* Acelerar animaciones si existen */
+.timeline-item.animated,
+.timeline-content.animated,
+.timeline-icon.animated {
+  animation-duration: 0.1s !important;
+  transition-duration: 0.1s !important;
 }
