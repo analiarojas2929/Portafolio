@@ -9,15 +9,16 @@ import sgsiImage from '../assets/images/fundamentos-de-sgsi-octubre-2024.png';
 import hackingImage from '../assets/images/introduccion-al-hacking-etico-y-pentesting.png';
 import redTeamImage from '../assets/images/nivelacion-de-conocimientos-para-el-red-team.png';
 import talentoDigitalImage from '../assets/images/talento-digital.png';
+import programaMentoriasTCSImage from '../assets/images/programa-mentorias-mujeres-tcs.png';
 
 const Badges = () => {
   const badges = [
     {
-      title: "AWS Academy Graduate",
-      issuer: "AWS Academy",
+      title: "AWS Academy Graduate - Cloud Foundations",
+      issuer: "Amazon Web Services (AWS)",
       image: awsImage,
       date: "2024",
-      url: "https://www.credly.com/users/analia-rojas",
+      url: "https://www.credly.com/badges/2c479e1a-cb1c-4c68-9908-7aa0f77801ca/public_url",
       icon: <FaAward />
     },
     {
@@ -59,6 +60,14 @@ const Badges = () => {
       date: "2024",
       url: "https://www.acreditta.com/credential/5ba7777c-b7e5-4390-af98-73e35964353a",
       icon: <FaAward />
+    },
+    {
+      title: "Programa Mentorías Mujeres Talento Digital",
+      issuer: "TCS (Tata Consultancy Services)",
+      image: programaMentoriasTCSImage, 
+      date: "2025",
+      url: "https://www.acreditta.com/credential/345d7be2-3169-413e-a74f-e087f5f36943",
+      icon: <FaAward />
     }
   ];
 
@@ -93,6 +102,9 @@ const Badges = () => {
               <h3>{badge.title}</h3>
               <p className="badge-issuer">{badge.issuer}</p>
               <p className="badge-date">{badge.date}</p>
+              {badge.description && (
+                <p className="badge-description">{badge.description}</p>
+              )}
               {badge.url !== "#" && (
                 <motion.a 
                   href={badge.url} 

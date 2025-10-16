@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import Badges from "../components/Badges";
 import Timeline from "../components/Timeline";
 import Projects from "./Projects"; // Importar el componente Projects
+import GitHubStats from "../components/GitHubStats";
 
 const Home = () => {
   const fadeInVariants = {
@@ -34,23 +35,54 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.h1 className="main-title">
-              Bienvenido a mi Portafolio
+              ¡Hola! Soy Analia Rojas
             </motion.h1>
             <motion.p className="hero-subtitle" transition={{ delay: 0.2 }}>
-              Desarrolladora Frontend & UX/UI Designer
+              Product Owner & Desarrolladora Full Stack
             </motion.p>
-            <motion.div className="hero-cta" transition={{ delay: 0.4 }}>
+            <motion.p className="hero-description" transition={{ delay: 0.3 }}>
+              Transformo ideas en soluciones digitales escalables. Especializada en React, Node.js y metodologías ágiles, 
+              combino liderazgo estratégico con expertise técnico para crear productos que generan valor real.
+            </motion.p>
+            <motion.div className="hero-cta" transition={{ delay: 0.5 }}>
               <motion.a
-                href="https://github.com/analiarojas2929"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#proyectos"
                 className="primary-button"
+                style={{ display: "inline-block", textDecoration: "none", marginRight: "1rem" }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Ver mis Proyectos
+              </motion.a>
+              <motion.a
+                href="#contacto"
+                className="secondary-button"
                 style={{ display: "inline-block", textDecoration: "none" }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Conoce mi trabajo
+                Hablemos
               </motion.a>
+            </motion.div>
+            
+            <motion.div 
+              className="hero-stats"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+            >
+              <div className="stat-item">
+                <span className="stat-number">5+</span>
+                <span className="stat-label">Años de Experiencia</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">15+</span>
+                <span className="stat-label">Proyectos Completados</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">30+</span>
+                <span className="stat-label">Certificaciones</span>
+              </div>
             </motion.div>
           </motion.div>
           <motion.div
@@ -92,9 +124,9 @@ const Home = () => {
 
       {/* Projects Section */}
       <section id="proyectos" className="projects-section-container">
-        <Projects /> {/* Asegúrate de que esto esté presente */}
+        <Projects />
         
-        {/* Luego mantenemos la sección CTA existente */}
+        {/* CTA Section */}
         <motion.section
           className="cta-section"
           initial="hidden"
@@ -135,7 +167,16 @@ const Home = () => {
             </motion.a>
           </div>
         </motion.section>
+      </section>
+
+      {/* Achievements/Badges Section */}
+      <section id="logros" className="badges-section-container">
         <Badges />
+      </section>
+
+      {/* GitHub Stats Section */}
+      <section id="github-stats" className="github-stats-wrapper">
+        <GitHubStats />
       </section>
 
       {/* Contact Section */}

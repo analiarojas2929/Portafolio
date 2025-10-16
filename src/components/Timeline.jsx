@@ -7,17 +7,46 @@ import {
   FaLaptopCode,
   FaCertificate,
   FaAward,
-  FaUserTie // Nuevo icono para Product Owner
+  FaUserTie,
+  FaRocket,
+  FaDatabase,
+  FaShieldAlt,
+  FaReact,
+  FaStar
 } from "react-icons/fa";
 
 const Timeline = () => {
-  const categoryColors = {
-    educacion: "#4CAF50",    // Verde para educación formal
-    bootcamp: "#2196F3",     // Azul para bootcamps
-    certificacion: "#FF9800", // Naranja para certificaciones
-    developer: "#9C27B0",    // Morado para desarrollo
-    carrera: "#F44336",      // Rojo para hitos profesionales
-    productowner: "#673AB7"  // Púrpura para Product Owner
+  const categoryConfig = {
+    educacion: { 
+      color: "#4CAF50", 
+      name: "Educación",
+      gradient: "linear-gradient(135deg, #4CAF50, #66BB6A)"
+    },
+    bootcamp: { 
+      color: "#2196F3", 
+      name: "Bootcamps",
+      gradient: "linear-gradient(135deg, #2196F3, #42A5F5)"
+    },
+    certificacion: { 
+      color: "#FF9800", 
+      name: "Certificaciones",
+      gradient: "linear-gradient(135deg, #FF9800, #FFB74D)"
+    },
+    developer: { 
+      color: "#9C27B0", 
+      name: "Desarrollo",
+      gradient: "linear-gradient(135deg, #9C27B0, #BA68C8)"
+    },
+    carrera: { 
+      color: "#F44336", 
+      name: "Carrera",
+      gradient: "linear-gradient(135deg, #F44336, #EF5350)"
+    },
+    productowner: { 
+      color: "#673AB7", 
+      name: "Product Owner",
+      gradient: "linear-gradient(135deg, #673AB7, #9575CD)"
+    }
   };
 
   const events = [
@@ -26,144 +55,230 @@ const Timeline = () => {
       title: "Product Owner - DevExtreme",
       description: "Liderando la estrategia de producto y coordinando equipos de desarrollo. Gestión de roadmap, análisis de mercado y optimización de experiencia de usuario.",
       icon: <FaUserTie />,
-      category: "productowner"
+      category: "productowner",
+      highlight: true,
+      skills: ["Gestión de Producto", "Scrum", "Análisis de Mercado"]
     },
     {
       year: "2025",
       title: "Titulada de Ingeniería en Informática",
       description: "Instituto DuocUC - Desarrollo de habilidades en programación, estructuras de datos y algoritmos.",
       icon: <FaGraduationCap />,
-      category: "educacion"
+      category: "educacion",
+      highlight: true,
+      skills: ["Algoritmos", "Estructuras de Datos", "Ingeniería de Software"]
     },
     {
       year: "2025",
       title: "Diplomado Diseño y Gestión Ágil de Proyectos",
       description: "Diplomado en Diseño y Gestión Ágil de Proyectos - Fundación Telefónica",
       icon: <FaAward />,
-      category: "certificacion"
+      category: "certificacion",
+      skills: ["Metodologías Ágiles", "Gestión de Proyectos", "Liderazgo"]
     },
     {
       year: "2024",
       title: "BOOTCAMP DESARROLLO FRONT-END TRAINEE",
       description: "Especialización en Vue.js, Node.js y tecnologías modernas. Desarrollo de aplicaciones web responsivas.",
-      icon: <FaCode />,
-      category: "bootcamp"
+      icon: <FaReact />,
+      category: "bootcamp",
+      skills: ["Vue.js", "Node.js", "JavaScript", "Frontend"]
     },
     {
       year: "2024",
       title: "Bootcamp Samsung Innovation Campus: Bigdata",
       description: "Bootcamp en Bigdata | Data Science - Samsung Innovation Campus",
-      icon: <FaLaptopCode />,
-      category: "bootcamp"
+      icon: <FaDatabase />,
+      category: "bootcamp",
+      skills: ["Big Data", "Data Science", "Python", "Analytics"]
     },
     {
       year: "2024",
       title: "Desarrollo Frontend con JavaScript",
       description: "Desarrollo de aplicaciones web con JavaScript y tecnologías modernas - CodigoDojo and Banco de Chile",
       icon: <FaCode />,
-      category: "certificacion"
+      category: "certificacion",
+      skills: ["JavaScript", "Frontend", "Web Development"]
     },
     {
       year: "2024",
       title: "Desarrolladora Fullstack",
       description: "Especialización en React, Node.js y tecnologías modernas. Desarrollo de aplicaciones web responsivas.",
-      icon: <FaCode />,
-      category: "developer"
+      icon: <FaRocket />,
+      category: "developer",
+      skills: ["React", "Node.js", "Full Stack", "APIs"]
     },
     {
       year: "2023",
       title: "Oracle Next Education + Alura Latam",
       description: "Formación intensiva en desarrollo web, Backend con Java, Frontend con React. Especialización G5 ONE.",
       icon: <FaCertificate />,
-      category: "certificacion"
+      category: "certificacion",
+      skills: ["Java", "React", "Oracle", "Backend"]
     },
     {
       year: "2022",
       title: "Introducción al Hacking Ético y Pentesting",
       description: "Introducción al Hacking Ético y Pentesting - Capacitación Universidad de Santiago de Chile (USACH)",
-      icon: <FaCertificate />,
-      category: "certificacion"
+      icon: <FaShieldAlt />,
+      category: "certificacion",
+      skills: ["Ciberseguridad", "Pentesting", "Ethical Hacking"]
     },
     {
       year: "2021",
       title: "Primeros Proyectos Web",
       description: "Desarrollo de proyectos personales utilizando HTML, CSS, JavaScript y React.",
       icon: <FaLaptopCode />,
-      category: "developer"
+      category: "developer",
+      skills: ["HTML", "CSS", "JavaScript", "React"]
     },
     {
       year: "2020",
       title: "Inicio en Desarrollo Web",
       description: "Comenzando mi viaje en el desarrollo web y fundamentos de programación.",
       icon: <FaBriefcase />,
-      category: "carrera"
+      category: "carrera",
+      skills: ["Programación", "Web Development", "Fundamentos"]
     },
     {
       year: "2020",
       title: "Estudiante de Ingeniería en Informática",
       description: "Instituto DuocUC - Desarrollo de habilidades en programación, estructuras de datos y algoritmos.",
       icon: <FaGraduationCap />,
-      category: "educacion"
+      category: "educacion",
+      skills: ["Informática", "Programación", "Matemáticas"]
     }
   ];
 
   return (
     <section className="timeline-section">
-      <motion.h2 
-        className="section-title"
+      <motion.div 
+        className="timeline-header"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true, margin: "-50px" }}
       >
-        Mi Trayectoria
-      </motion.h2>
+        <h2 className="section-title">Mi Trayectoria Profesional</h2>
+        <p className="section-subtitle">Un viaje de aprendizaje y crecimiento constante</p>
+      </motion.div>
 
-      <div className="timeline-categories">
-        {Object.entries(categoryColors).map(([category, color]) => (
+      <motion.div 
+        className="timeline-categories"
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        {Object.entries(categoryConfig).map(([category, config], index) => (
           <motion.div 
             key={category} 
             className="category-item"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2, delay: index * 0.05 }}
+            whileHover={{ scale: 1.05 }}
+            viewport={{ once: true, margin: "-30px" }}
           >
-            <span className="category-dot" style={{ backgroundColor: color }}></span>
-            <span className="category-name">{category}</span>
+            <span 
+              className="category-dot" 
+              style={{ background: config.gradient }}
+            ></span>
+            <span className="category-name">{config.name}</span>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="timeline-container">
+        <div className="timeline-line"></div>
         {events.map((event, index) => (
           <motion.div
             key={index}
-            className={`timeline-item ${event.category}`}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
+            className={`timeline-item ${event.category} ${event.highlight ? 'highlight' : ''}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            viewport={{ once: true, margin: "-80px" }}
           >
-            <div 
+            <motion.div 
               className="timeline-icon"
               style={{ 
-                background: `linear-gradient(45deg, ${categoryColors[event.category]}, ${categoryColors[event.category]}dd)`
+                background: categoryConfig[event.category].gradient,
+                boxShadow: `0 0 20px ${categoryConfig[event.category].color}40`
               }}
+              whileHover={{ 
+                scale: 1.1,
+                rotate: 15,
+                boxShadow: `0 0 30px ${categoryConfig[event.category].color}60`
+              }}
+              transition={{ duration: 0.2 }}
             >
               {event.icon}
-            </div>
+              {event.highlight && <FaStar className="highlight-star" />}
+            </motion.div>
+            
             <motion.div 
               className="timeline-content"
-              style={{ borderLeft: `4px solid ${categoryColors[event.category]}` }}
-              whileHover={{ scale: 1.02 }}
+              style={{ 
+                borderLeft: `4px solid ${categoryConfig[event.category].color}`,
+                background: `linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))`
+              }}
+              whileHover={{ 
+                scale: 1.01,
+                boxShadow: `0 8px 25px rgba(0,0,0,0.15)`,
+                background: `linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))`
+              }}
+              transition={{ duration: 0.2 }}
             >
-              <span 
-                className="timeline-year"
-                style={{ backgroundColor: categoryColors[event.category] }}
-              >
-                {event.year}
-              </span>
+              <div className="timeline-header-content">
+                <motion.span 
+                  className="timeline-year"
+                  style={{ background: categoryConfig[event.category].gradient }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {event.year}
+                </motion.span>
+                <span 
+                  className="timeline-category-badge"
+                  style={{ color: categoryConfig[event.category].color }}
+                >
+                  {categoryConfig[event.category].name}
+                </span>
+              </div>
+              
               <h3>{event.title}</h3>
               <p>{event.description}</p>
+              
+              {event.skills && (
+                <motion.div 
+                  className="skills-tags"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                >
+                  {event.skills.map((skill, skillIndex) => (
+                    <motion.span 
+                      key={skillIndex}
+                      className="skill-tag"
+                      style={{ 
+                        borderColor: categoryConfig[event.category].color,
+                        color: categoryConfig[event.category].color
+                      }}
+                      whileHover={{ 
+                        scale: 1.05,
+                        backgroundColor: `${categoryConfig[event.category].color}15`
+                      }}
+                      initial={{ opacity: 0, y: 5 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.2, delay: skillIndex * 0.03 }}
+                      viewport={{ once: true, margin: "-30px" }}
+                    >
+                      {skill}
+                    </motion.span>
+                  ))}
+                </motion.div>
+              )}
             </motion.div>
           </motion.div>
         ))}
