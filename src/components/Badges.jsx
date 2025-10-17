@@ -10,6 +10,7 @@ import hackingImage from '../assets/images/introduccion-al-hacking-etico-y-pente
 import redTeamImage from '../assets/images/nivelacion-de-conocimientos-para-el-red-team.png';
 import talentoDigitalImage from '../assets/images/talento-digital.png';
 import programaMentoriasTCSImage from '../assets/images/programa-mentorias-mujeres-tcs.png';
+import cienciaDataImage from '../assets/images/bg_ciencia_de_datos.png';
 
 const Badges = () => {
   const badges = [
@@ -68,6 +69,14 @@ const Badges = () => {
       date: "2025",
       url: "https://www.acreditta.com/credential/345d7be2-3169-413e-a74f-e087f5f36943",
       icon: <FaAward />
+    },
+    {
+      title: "Ciencia de Datos - Especialidad",
+      issuer: "Talento Digital 2025",
+      image: cienciaDataImage,
+      date: "2025",
+      url: "https://www.acreditta.com/credential/75481bea-4e5b-4326-a47c-c0a8e22a3c79?utm_source=copy&resource_type=badge&resource=75481bea-4e5b-4326-a47c-c0a8e22a3c79",
+      icon: <FaCertificate />
     }
   ];
 
