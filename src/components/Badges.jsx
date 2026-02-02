@@ -11,9 +11,81 @@ import redTeamImage from '../assets/images/nivelacion-de-conocimientos-para-el-r
 import talentoDigitalImage from '../assets/images/talento-digital.png';
 import programaMentoriasTCSImage from '../assets/images/programa-mentorias-mujeres-tcs.png';
 import cienciaDataImage from '../assets/images/bg_ciencia_de_datos.png';
+import capc from '../assets/images/capc.png';
+import depc from '../assets/images/depc.png';
+import sfpc from '../assets/images/sfpc.png';
+import cehpc from '../assets/images/cehpc.png';
+import spopc from '../assets/images/spopc.png';
+import smpc from '../assets/images/smpc.png';
+import depc2 from '../assets/images/depc2.png';
+import voluntariammt from '../assets/images/voluntariammt.png';
 
 const Badges = () => {
   const badges = [
+    {
+      title: "Cybersecurity Awareness Professional Certification - CAPC",
+      issuer: "CertiProf",
+      image: capc, // Cambiar por la imagen correspondiente
+      date: "Ene 2026 - Ene 2029",
+      url: "https://www.credly.com/badges/24ec48ae-8282-4024-a14d-2abd44552e19/public_url",
+      icon: <FaCertificate />
+    },
+    {
+      title: "DevOps Essentials Professional Certification - DEPC®",
+      issuer: "CertiProf",
+      image: depc, // Cambiar por la imagen correspondiente
+      date: "Ene 2026 - Ene 2029",
+      url: "https://www.credly.com/earner/earned/badge/8812a4ce-120c-4d9b-b712-f3121143f479",
+      icon: <FaCertificate />
+    },
+    {
+      title: "Scrum Foundation Professional Certification - SFPC™",
+      issuer: "CertiProf",
+      image: sfpc, // Cambiar por la imagen correspondiente
+      date: "Ene 2026 - Ene 2029",
+      url: "https://www.credly.com/earner/earned/badge/a59e3d0e-d6e9-4e14-8149-935289ffb198",
+      icon: <FaCertificate />
+    },
+    {
+      title: "Ethical Hacking Professional Certification - CEHPC™",
+      issuer: "CertiProf",
+      image: cehpc, // Cambiar por la imagen correspondiente
+      date: "Dic 2025 - Dic 2028",
+      url: "https://www.credly.com/earner/earned/badge/04785f18-7519-44cc-8de1-45726263f71a",
+      icon: <FaCertificate />
+    },
+    {
+      title: "Scrum Product Owner Professional Certification - SPOPC®",
+      issuer: "CertiProf",
+      image: spopc, // Cambiar por la imagen correspondiente
+      date: "Dic 2025 - Dic 2028",
+      url: "https://www.credly.com/earner/earned/badge/747f6425-70ad-4195-8eec-b5486b0462c1",
+      icon: <FaAward />
+    },
+    {
+      title: "Voluntaria más mujeres en las tics",
+      issuer: "Canvas Credentials (Badgr)",
+      image: voluntariammt, // Cambiar por la imagen correspondiente
+      date: "Dic 2025 - Dic 2027",
+      url: "https://badges.parchment.com/public/assertions/lCYBoSIgRb2hZmVlTgKjFg",
+      icon: <FaMedal />
+    },
+    {
+      title: "DevOps Essentials Professional Certification (Spanish)",
+      issuer: "CertiProf",
+      image: depc2, // Cambiar por la imagen correspondiente
+      date: "Nov 2025 - Nov 2028",
+      url: "https://www.credly.com/earner/earned/badge/12fa7bb5-c3a7-4942-b203-cf1f9f455933",
+      icon: <FaCertificate />
+    },
+    {
+      title: "Scrum Master Professional Certification - SMPC®",
+      issuer: "CertiProf",
+      image: smpc, // Cambiar por la imagen correspondiente
+      date: "Nov 2025 - Nov 2028",
+      url: "https://www.credly.com/earner/earned/badge/1b46bd7e-0ac1-49d1-ab25-ba33fb2445c9",
+      icon: <FaAward />
+    },
     {
       title: "AWS Academy Graduate - Cloud Foundations",
       issuer: "Amazon Web Services (AWS)",

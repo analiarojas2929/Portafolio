@@ -53,7 +53,7 @@ const Timeline = () => {
     {
       year: "2025",
       title: "Product Owner - DevExtreme",
-      description: "Liderando la estrategia de producto y coordinando equipos de desarrollo. Gestión de roadmap, análisis de mercado y optimización de experiencia de usuario.",
+      description: "Defino roadmap, alinear equipos y optimizar la experiencia de producto en DevExtreme.",
       icon: <FaUserTie />,
       category: "productowner",
       highlight: true,
@@ -62,7 +62,7 @@ const Timeline = () => {
     {
       year: "2025",
       title: "Titulada de Ingeniería en Informática",
-      description: "Instituto DuocUC - Desarrollo de habilidades en programación, estructuras de datos y algoritmos.",
+      description: "DuocUC | Formación en programación, estructuras de datos y arquitectura de software.",
       icon: <FaGraduationCap />,
       category: "educacion",
       highlight: true,
@@ -71,7 +71,7 @@ const Timeline = () => {
     {
       year: "2025",
       title: "Diplomado Diseño y Gestión Ágil de Proyectos",
-      description: "Diplomado en Diseño y Gestión Ágil de Proyectos - Fundación Telefónica",
+      description: "Fundación Telefónica | Diseño y gestión ágil aplicada a proyectos digitales.",
       icon: <FaAward />,
       category: "certificacion",
       skills: ["Metodologías Ágiles", "Gestión de Proyectos", "Liderazgo"]
@@ -79,7 +79,7 @@ const Timeline = () => {
     {
       year: "2024",
       title: "BOOTCAMP DESARROLLO FRONT-END TRAINEE",
-      description: "Especialización en Vue.js, Node.js y tecnologías modernas. Desarrollo de aplicaciones web responsivas.",
+      description: "Especialización en Vue.js y Node.js para crear experiencias web responsivas.",
       icon: <FaReact />,
       category: "bootcamp",
       skills: ["Vue.js", "Node.js", "JavaScript", "Frontend"]
@@ -87,7 +87,7 @@ const Timeline = () => {
     {
       year: "2024",
       title: "Bootcamp Samsung Innovation Campus: Bigdata",
-      description: "Bootcamp en Bigdata | Data Science - Samsung Innovation Campus",
+      description: "Samsung Innovation Campus | Data Science aplicada a proyectos de big data.",
       icon: <FaDatabase />,
       category: "bootcamp",
       skills: ["Big Data", "Data Science", "Python", "Analytics"]
@@ -95,7 +95,7 @@ const Timeline = () => {
     {
       year: "2024",
       title: "Desarrollo Frontend con JavaScript",
-      description: "Desarrollo de aplicaciones web con JavaScript y tecnologías modernas - CodigoDojo and Banco de Chile",
+      description: "CodigoDojo + Banco de Chile | Desarrollo web moderno con JavaScript.",
       icon: <FaCode />,
       category: "certificacion",
       skills: ["JavaScript", "Frontend", "Web Development"]
@@ -103,7 +103,7 @@ const Timeline = () => {
     {
       year: "2024",
       title: "Desarrolladora Fullstack",
-      description: "Especialización en React, Node.js y tecnologías modernas. Desarrollo de aplicaciones web responsivas.",
+      description: "Stack React + Node.js para soluciones full stack escalables.",
       icon: <FaRocket />,
       category: "developer",
       skills: ["React", "Node.js", "Full Stack", "APIs"]
@@ -111,7 +111,7 @@ const Timeline = () => {
     {
       year: "2023",
       title: "Oracle Next Education + Alura Latam",
-      description: "Formación intensiva en desarrollo web, Backend con Java, Frontend con React. Especialización G5 ONE.",
+      description: "ONE + Alura | Formación intensiva en Java backend y React frontend.",
       icon: <FaCertificate />,
       category: "certificacion",
       skills: ["Java", "React", "Oracle", "Backend"]
@@ -119,7 +119,7 @@ const Timeline = () => {
     {
       year: "2022",
       title: "Introducción al Hacking Ético y Pentesting",
-      description: "Introducción al Hacking Ético y Pentesting - Capacitación Universidad de Santiago de Chile (USACH)",
+      description: "USACH | Fundamentos de hacking ético y ejercicios de pentesting guiados.",
       icon: <FaShieldAlt />,
       category: "certificacion",
       skills: ["Ciberseguridad", "Pentesting", "Ethical Hacking"]
@@ -127,7 +127,7 @@ const Timeline = () => {
     {
       year: "2021",
       title: "Primeros Proyectos Web",
-      description: "Desarrollo de proyectos personales utilizando HTML, CSS, JavaScript y React.",
+      description: "Proyectos personales con HTML, CSS, JS y React para afinar mi stack.",
       icon: <FaLaptopCode />,
       category: "developer",
       skills: ["HTML", "CSS", "JavaScript", "React"]
@@ -135,7 +135,7 @@ const Timeline = () => {
     {
       year: "2020",
       title: "Inicio en Desarrollo Web",
-      description: "Comenzando mi viaje en el desarrollo web y fundamentos de programación.",
+      description: "Inicio del camino en programación y fundamentos web.",
       icon: <FaBriefcase />,
       category: "carrera",
       skills: ["Programación", "Web Development", "Fundamentos"]
@@ -143,7 +143,7 @@ const Timeline = () => {
     {
       year: "2020",
       title: "Estudiante de Ingeniería en Informática",
-      description: "Instituto DuocUC - Desarrollo de habilidades en programación, estructuras de datos y algoritmos.",
+      description: "DuocUC | Base en programación, estructuras y pensamiento lógico.",
       icon: <FaGraduationCap />,
       category: "educacion",
       skills: ["Informática", "Programación", "Matemáticas"]

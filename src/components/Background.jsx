@@ -15,7 +15,7 @@ const Background = () => {
       options={{
         background: {
           color: {
-            value: "#0d1117",
+            value: "#1f252dff",
           },
         },
         fpsLimit: 120,
@@ -42,13 +42,13 @@ const Background = () => {
         },
         particles: {
           color: {
-            value: ["#fe7cae", "#ff7f50", "#d76a87"],
+            value: ["#667eea", "#764ba2", "#8b5cf6"],
           },
           links: {
-            color: "#ffffff",
+            color: "#cbd5e1",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.35,
             width: 1,
           },
           move: {
@@ -69,7 +69,7 @@ const Background = () => {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: 0.6,
           },
           shape: {
             type: "circle",

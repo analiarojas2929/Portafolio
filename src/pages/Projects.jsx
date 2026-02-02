@@ -6,12 +6,32 @@ import dataScienceImg from '../assets/images/portafoliodataset.png';
 import portalVehicularImg from '../assets/images/portal-vehicular.png';
 import blogFrontEndImg from '../assets/images/blogfrond.png'; // Asegúrate de tener esta imagen también
 import bodegaCiseImg from '../assets/images/inventario.png'; // Imagen del proyecto Inventario
+import elPinonImg from '../assets/images/el-pinon.png'; // Imagen del proyecto El Piñón
+import rikoRikoImg from '../assets/images/rikoriko.png'; // Imagen del proyecto Riko Riko
 
 const Projects = () => {
   // Datos de tus proyectos
   const projects = [
     {
       id: 1,
+      title: "El Piñón",
+      description: "Plataforma de comercio electrónico para almacén local con gestión de productos, carrito de compras y sistema de pedidos.",
+      demoLink: "https://elpinon.almacenlocal.com/",
+      codeLink: "",
+      technologies: ["React", "E-commerce", "Node.js"],
+      image: elPinonImg
+    },
+    {
+      id: 2,
+      title: "Riko Riko",
+      description: "Sitio web de restaurante con menú interactivo, sistema de reservas y catálogo de productos gastronómicos.",
+      demoLink: "https://rikoriko.cl/",
+      codeLink: "",
+      technologies: ["WordPress", "PHP", "MySQL"],
+      image: rikoRikoImg
+    },
+    {
+      id: 3,
       title: "Mamá Soy Yo",
       description: "Plataforma para madres con recursos, comunidad y herramientas de apoyo en la maternidad.",
       demoLink: "https://mamasoyyo.web.app/",
@@ -20,7 +40,7 @@ const Projects = () => {
       image: mamaSoyYoImg // Añadida la referencia a la imagen
     },
     {
-      id: 2,
+      id: 4,
       title: "Portal Vehicular",
       description: "Sistema de gestión y seguimiento vehicular con funcionalidades de registro, monitoreo y reportes.",
       demoLink: "https://portal-vehicular.azurewebsites.net/",
@@ -29,7 +49,7 @@ const Projects = () => {
       image: portalVehicularImg // Añadida la referencia a la imagen
     },
     {
-      id: 3,
+      id: 5,
       title: "Gestión de Inventario CISEL",
       description: "Sistema para administrar inventarios de materiales de construcción con seguimiento de estado, cantidades y fechas.",
       demoLink: "",
@@ -38,7 +58,7 @@ const Projects = () => {
       image: bodegaCiseImg
     },
     {
-      id: 4,
+      id: 6,
       title: "Data Science Portfolio",
       description: "Portafolio de proyectos de ciencia de datos mostrando análisis, visualizaciones y modelos predictivos.",
       demoLink: "https://datascience-portafolio.web.app/",
@@ -47,7 +67,7 @@ const Projects = () => {
       image: dataScienceImg // Añadida la referencia a la imagen
     },
     {
-      id: 5,
+      id: 7,
       title: "Blog FrontEnd",
       description: "Plataforma de blog para compartir tutoriales y artículos sobre desarrollo frontend, con enfoque en Bootstrap y JavaScript.",
       demoLink: "",
